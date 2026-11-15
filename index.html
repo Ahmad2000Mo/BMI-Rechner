@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trasnformertext</title>
-    <link rel="stylesheet" href="main.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI-Rechner</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
-  <h1>BMI Rechner</h1>
+  <main class="card">
+    <h1>BMI-Rechner</h1>
 
-  <label for="height">Größe (cm):</label>
-  <input type="number" id="height" placeholder="z.B. 177"><br>
+    <form id="bmi-form" novalidate>
+      <label for="height">Größe (cm)</label>
+      <input type="number" id="height" placeholder="z. B. 177" min="1" step="any" inputmode="decimal">
 
-  <label for="weight">Gewicht (kg):</label>
-  <input type="number" id="weight" placeholder="z.B. 83"><br><br>
+      <label for="weight">Gewicht (kg)</label>
+      <input type="number" id="weight" placeholder="z. B. 83" min="1" step="any" inputmode="decimal">
 
-  <button id="submit-bmi">Berechnen</button>
+      <button type="submit">Berechnen</button>
+    </form>
 
-  <h3 id="result"></h3>
+    <p id="result" role="status" aria-live="polite"></p>
+  </main>
 
-<Script src="app.js"></Script>
+  <script src="app.js"></script>
 
 </body>
 </html>
